@@ -6,17 +6,25 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - ChameleonFramework/Swift
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - ChameleonFramework
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
 
-PODFILE CHECKSUM: 75d3e45c99f166975fef30cb56197cbcab103f82
+PODFILE CHECKSUM: 135f786b6ec2cb2fdb98a8531c4c7c319fb62e07
 
 COCOAPODS: 1.5.3

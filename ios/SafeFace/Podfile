@@ -7,6 +7,6 @@ target 'SafeFace' do
 
   # Pods for SafeFace
     pod 'Alamofire', '~> 4.7'
-    pod 'ChameleonFramework/Swift'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 end
