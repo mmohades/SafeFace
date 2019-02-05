@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
         
     }
     
@@ -23,9 +26,9 @@ class ViewController: UIViewController {
     
     @IBAction func lockPressed(_ sender: Any) {
         
-        
+        request(with : "http://10.126.79.15:5000/lock")
         animate(this: lockButton)
-        
+
     }
     
     
@@ -33,8 +36,33 @@ class ViewController: UIViewController {
     
     @IBAction func unlockPressed(_ sender: Any) {
         
+        request(with: "http://10.126.79.15:5000/unlock")
         animate(this: unlockButton)
 
+
+    }
+    
+    
+    
+    func request(with url: String){
+    
+        
+        Alamofire.request(url, method: .get)
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    
+                    print("Sucess!")
+                    
+                
+                }
+                    
+                else {
+                    print("Error: \(String(describing: response.result.error))")
+                    
+                }
+        }
+        
+        
     }
     
     
